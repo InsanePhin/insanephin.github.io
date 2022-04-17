@@ -1,22 +1,31 @@
-name: Flutter Web build
-
+name: Flutter Web
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  workflow_dispatch:
-
+    branches:
+      - master
 jobs:
   build:
+    name: Build Web
+    env:
+      my_secret: $
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: "stable"
-    - run: flutter pub get
-    - run: flutter test
-    - run: flutter build web
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - run: flutter config --enable-web
+      - run: flutter pub get
+      - run: flutter build web --release
+        working-directory: ./xyz
+      - run: |
+          cd xyz/build/web
+          git init
+          git config --global user.email insanephin@gmail.com
+          git config --global user.name InsanePhin
+          git status
+          git remote add origin https://$@github.com/insanephin/xyz.git 
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
