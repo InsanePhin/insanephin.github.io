@@ -7,7 +7,7 @@ jobs:
   build:
     name: Build Web
     env:
-      my_secret: $
+      my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
           git config --global user.email insanephin@gmail.com
           git config --global user.name InsanePhin
           git status
-          git remote add origin https://$@github.com/insanephin/xyz.git 
+          git remote add origin https://${{secrets.commit_secret}}@github.com/insanephin/xyz.git 
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
