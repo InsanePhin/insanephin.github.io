@@ -1,18 +1,56 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      debugShowCheckedModeBanner: false,
+      title: 'StatefulWidget',
+      
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: Text("StatefulWidget"),
+          centerTitle: true,
         ),
-        body: const Center(
-          child: Text('Bye World'),
+
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "$count",
+              style: TextStyle(fontSize: 80),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                    onPressed: () {
+                      setState(() {
+                        count--;
+                      });
+                    },
+                    child: Text('-')),
+                FloatingActionButton(
+                    onPressed: () {
+                      setState(() {
+                        count++;
+                      });
+                    },
+                    child: Text('+'))
+              ],
+            )
+          ],
         ),
       ),
     );
