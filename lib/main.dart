@@ -18,6 +18,17 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'StatefulWidget',
       
+      theme: ThemeData(
+        fontFamily: 'Sunflower',
+        brightness: Brightness.light,
+        backgroundColor: Colors.white,
+        accentColorBrightness: Brightness.light,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Colors.blueGrey,
+        primarySwatch: Colors.blueGrey,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      
       home: Scaffold(
         appBar: AppBar(
           title: Text("StatefulWidget"),
