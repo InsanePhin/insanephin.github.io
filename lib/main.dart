@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Portfolio());
 }
 
-class MyApp extends StatefulWidget {
+class Portfolio extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _PortfoliiState createState() => _PortfoliiState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _PortfoliiState extends State<Portfolio> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "InsanePhin's Factory",
+      title: "InsanePhin",
       theme: ThemeData(
         fontFamily: 'Sunflower',
         brightness: Brightness.light,
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       
       home: Scaffold(
         appBar: AppBar(
-          title: Text("InsanePhin's Factory"),
+          title: Text("Hi! I'm InsanePhin"),
           leading: Icon(Icons.menu_outlined),
           centerTitle: true,
           backgroundColor: Colors.transparent,
