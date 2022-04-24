@@ -10,13 +10,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int count = 0;
+  static final ValueNotifier<ThemeMode> themeNotifier =
+      ValueNotifier(ThemeMode.light);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'StatefulWidget',
+      title: "InsanePhin's Factory",
+      darkTheme: ThemeData.dark(),
       
       theme: ThemeData(
         fontFamily: 'Sunflower',
@@ -31,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       
       home: Scaffold(
         appBar: AppBar(
-          title: Text("InsanePhin's Factory"),
+          title: Text(widget.title),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -43,28 +45,9 @@ class _MyAppState extends State<MyApp> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "$count",
+              "Coming Soon",
               style: TextStyle(fontSize: 80),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FloatingActionButton(
-                    onPressed: () {
-                      setState(() {
-                        count--;
-                      });
-                    },
-                    child: Text('-')),
-                FloatingActionButton(
-                    onPressed: () {
-                      setState(() {
-                        count++;
-                      });
-                    },
-                    child: Text('+'))
-              ],
-            )
           ],
         ),
       ),
