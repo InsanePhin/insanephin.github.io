@@ -31,6 +31,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text("InsanePhin's Factory"),
+          leading: Icon(Icons.menu_outlined),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -39,10 +40,7 @@ class _MyAppState extends State<MyApp> {
         extendBodyBehindAppBar: true,
 
         body: Center(
-          child: [
-            Text(
-              "Coming Soon",
-              style: TextStyle(fontSize: 30),
+          child: Text("Coming Soon", style: TextStyle(fontSize: 30),
             ),
           ],
         ),
