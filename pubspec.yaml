@@ -32,11 +32,11 @@ flutter:
 
 fonts:
   - family: Sunflower
-  fonts:
-    - asset: assets/font/Sunflower/SunFlower-Bold.ttf
-      weight: 700
-    - asset: assets/font/Sunflower/SunFlower-Light.ttf
-      weight: 200
-    - asset: assets/font/Sunflower/SunFlower-Medium.ttf
-      weight: 500
+    fonts:
+      - asset: assets/font/Sunflower/SunFlower-Bold.ttf
+        weight: 700
+      - asset: assets/font/Sunflower/SunFlower-Light.ttf
+        weight: 200
+      - asset: assets/font/Sunflower/SunFlower-Medium.ttf
+        weight: 500
       
