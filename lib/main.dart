@@ -10,9 +10,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  static final ValueNotifier<ThemeMode> themeNotifier =
-      ValueNotifier(ThemeMode.light);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       
       home: Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text("InsanePhin's Factory"),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
