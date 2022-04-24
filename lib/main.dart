@@ -41,8 +41,7 @@ class _MyAppState extends State<MyApp> {
 
         body: Center(
           child: Text("Coming Soon", style: TextStyle(fontSize: 30),
-            ),
-          ],
+          ),
         ),
       ),
     );
