@@ -31,9 +31,13 @@ class _MyAppState extends State<MyApp> {
       
       home: Scaffold(
         appBar: AppBar(
-          title: Text("StatefulWidget"),
+          title: Text("InsanePhin's Factory"),
           centerTitle: true,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
         ),
+        
+        extendBodyBehindAppBar: true,
 
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
