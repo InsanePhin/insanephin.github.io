@@ -38,12 +38,11 @@ class _MyAppState extends State<MyApp> {
         
         extendBodyBehindAppBar: true,
 
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: Center(
           children: [
             Text(
               "Coming Soon",
-              style: TextStyle(fontSize: 80),
+              style: TextStyle(fontSize: 30),
             ),
           ],
         ),
