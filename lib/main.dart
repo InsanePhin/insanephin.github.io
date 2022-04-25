@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
                             accountEmail: Text('insanephin@gmail.com'),
                             currentAccountPicture: CircleAvatar(
                               backgroundColor: Colors.transparent,
-                              backgroundImage: AssetImage("image/avatar/insanephin.png"),
+                              backgroundImage: NetworkImage('https://cdn.discordapp.com/avatars/354184274347294720/5b7c3666f8a3b844dd3685cde13726dc.webp'),
                             ),
                           ),
 
