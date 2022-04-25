@@ -76,6 +76,6 @@ class Home extends StatelessWidget {
                     style: TextStyle(fontSize: 30),
                 ),
             ),
-        )
+        );
     }
 }
