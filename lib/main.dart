@@ -33,23 +33,25 @@ class Home extends StatelessWidget {
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(
-                title: const Text("Hi! I'm InsanePhin"),
-                leading: const Icon(Icons.menu_outlined),
+                title: const Text("InsanePhin"),
                 centerTitle: true,
                 backgroundColor: Colors.transparent,
                 elevation: 0,
             ),
             
-            drawer: Drawer(
+            drawer: Drawer( 
                 child: ListView(
                     padding: EdgeInsets.zero,
                     children: [
-                        const DrawerHeader(
-                            child: Text('Menu'),
-                            decoration: BoxDecoration(
-                                
+                        const UserAccountsDrawerHeader(
+                            accountName: Text('InsanePhin (Seo Minseo)'), 
+                            accountEmail: Text('insanephin@gmail.com'),
+                            currentAccountPicture: CircleAvatar(
+                              backgroundColor: Colors.transparent,
+                              backgroundImage: AssetImage("image/avatar/insanephin.png"),
                             ),
-                        ),
+                          ),
+
                         ListTile(
                             title: const Text('소개'),
                             onTap: () {

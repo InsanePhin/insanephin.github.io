@@ -40,4 +40,7 @@ fonts:
         weight: 200
       - asset: assets/font/Sunflower/SunFlower-Medium.ttf
         weight: 500
+    
+assets:
+  - image/avatar/insanephin.png
       
