@@ -11,7 +11,7 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
       return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: "InsanePhin",
+          title: "Who is InsanePhin?",
           
           theme: ThemeData(
               fontFamily: 'Sunflower',
